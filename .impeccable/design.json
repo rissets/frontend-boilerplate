@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T16:54:19.584523Z",
+  "title": "Design System: Frontend Boilerplate",
+  "extensions": {
+    "colorMeta": {
+      "light-primary": {
+        "role": "primary",
+        "displayName": "Biru aksi / light"
+      },
+      "dark-primary": {
+        "role": "primary",
+        "displayName": "Biru aksi / dark"
+      },
+      "light-background": {
+        "role": "neutral",
+        "displayName": "Kanvas netral sejuk / light"
+      },
+      "dark-background": {
+        "role": "neutral",
+        "displayName": "Kanvas netral sejuk / dark"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Judul beranda / desktop",
+        "purpose": "Ukuran display mulai breakpoint sm; memakai headline di bawahnya."
+      },
+      "headline": {
+        "displayName": "Judul halaman",
+        "purpose": "Judul kedua halaman contoh serta judul beranda pada ponsel."
+      },
+      "body": {
+        "displayName": "Isi",
+        "purpose": "Source Sans 3 lokal melalui alias Workspace."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-xs",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Outline button, Input, dan SelectTrigger ui-v1."
+      },
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+        "purpose": "Card ui-v1."
+      },
+      {
+        "name": "shadow-md",
+        "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "purpose": "SelectContent dan popover ui-v1."
+      },
+      {
+        "name": "shadow-lg",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "DialogContent ui-v1."
+      }
+    ],
+    "motion": [
+      {
+        "name": "duration-fast",
+        "value": "140ms",
+        "purpose": "PresenceMessage; token DOM fast."
+      },
+      {
+        "name": "duration-normal",
+        "value": "220ms",
+        "purpose": "Reveal; token DOM normal."
+      },
+      {
+        "name": "duration-slow",
+        "value": "320ms",
+        "purpose": "Token DOM yang tersedia, belum diperlukan pada wrapper saat ini."
+      },
+      {
+        "name": "easeOut",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Easing Reveal dari motion.tokens.ts."
+      },
+      {
+        "name": "ui-transition-duration",
+        "value": "150ms",
+        "purpose": "Durasi default utility transition Tailwind untuk primitive."
+      },
+      {
+        "name": "ui-transition-ease",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Easing default utility transition Tailwind untuk primitive."
+      },
+      {
+        "name": "reduced-motion-css-duration",
+        "value": "0.01ms",
+        "purpose": "Durasi animation/transition global ketika prefers-reduced-motion aktif."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem"
+      },
+      {
+        "name": "md",
+        "value": "48rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button / default",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Varian default dari shared/ui/button; cuplikan primitive, bukan aksi penyimpanan.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-default\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\"/></svg>Tambah item</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; height:2.25rem; padding:0.5rem 1rem; border:0 solid transparent; border-radius:var(--radius-md, 0.5rem); color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; font-weight:500; white-space:nowrap; cursor:pointer; outline:none; text-decoration:none; transition:all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn:has(>svg) { padding-inline:0.75rem; } .ds-btn>svg { width:1rem; height:1rem; flex-shrink:0; pointer-events:none; } .ds-btn:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-btn:disabled { pointer-events:none; opacity:0.5; } @media (prefers-reduced-motion:reduce) { .ds-btn { transition-duration:0.01ms; } } .ds-btn-default { background:var(--primary, #1e5f9e); color:var(--primary-foreground, #ffffff); } .ds-btn-default:hover { background:color-mix(in oklab, var(--primary, #1e5f9e) 90%, transparent); }"
+    },
+    {
+      "name": "Button / outline",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Varian outline dari shared/ui/button; cuplikan primitive, bukan aksi penyimpanan.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-outline\">Pulihkan sampel</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; height:2.25rem; padding:0.5rem 1rem; border:0 solid transparent; border-radius:var(--radius-md, 0.5rem); color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; font-weight:500; white-space:nowrap; cursor:pointer; outline:none; text-decoration:none; transition:all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn:has(>svg) { padding-inline:0.75rem; } .ds-btn>svg { width:1rem; height:1rem; flex-shrink:0; pointer-events:none; } .ds-btn:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-btn:disabled { pointer-events:none; opacity:0.5; } @media (prefers-reduced-motion:reduce) { .ds-btn { transition-duration:0.01ms; } } .ds-btn-outline { border-width:1px; border-color:var(--border, #d6dee8); background:transparent; box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05); } .ds-btn-outline:hover { background:var(--accent, #eaf0f6); } :host-context(.dark) .ds-btn-outline { border-color:var(--input, #526a84); } :host-context(.dark) .ds-btn-outline:hover { background:color-mix(in oklab, var(--input, #526a84) 50%, transparent); }"
+    },
+    {
+      "name": "Button / secondary",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Varian secondary dari shared/ui/button; cuplikan primitive, bukan aksi penyimpanan.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-secondary\">Geometri dasar</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; height:2.25rem; padding:0.5rem 1rem; border:0 solid transparent; border-radius:var(--radius-md, 0.5rem); color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; font-weight:500; white-space:nowrap; cursor:pointer; outline:none; text-decoration:none; transition:all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn:has(>svg) { padding-inline:0.75rem; } .ds-btn>svg { width:1rem; height:1rem; flex-shrink:0; pointer-events:none; } .ds-btn:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-btn:disabled { pointer-events:none; opacity:0.5; } @media (prefers-reduced-motion:reduce) { .ds-btn { transition-duration:0.01ms; } } .ds-btn-secondary { background:var(--secondary, #eaf0f6); color:var(--secondary-foreground, #213d58); } .ds-btn-secondary:hover { background:color-mix(in oklab, var(--secondary, #eaf0f6) 80%, transparent); }"
+    },
+    {
+      "name": "Button / ghost",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Varian ghost dari shared/ui/button; cuplikan primitive, bukan aksi penyimpanan.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-ghost\">Arsipkan</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; height:2.25rem; padding:0.5rem 1rem; border:0 solid transparent; border-radius:var(--radius-md, 0.5rem); color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; font-weight:500; white-space:nowrap; cursor:pointer; outline:none; text-decoration:none; transition:all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn:has(>svg) { padding-inline:0.75rem; } .ds-btn>svg { width:1rem; height:1rem; flex-shrink:0; pointer-events:none; } .ds-btn:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-btn:disabled { pointer-events:none; opacity:0.5; } @media (prefers-reduced-motion:reduce) { .ds-btn { transition-duration:0.01ms; } } .ds-btn-ghost { background:transparent; } .ds-btn-ghost:hover { background:var(--accent, #eaf0f6); } :host-context(.dark) .ds-btn-ghost:hover { background:color-mix(in oklab, var(--accent, #283b50) 50%, transparent); }"
+    },
+    {
+      "name": "Button / link",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Varian link dari shared/ui/button; cuplikan primitive, bukan aksi penyimpanan.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-link\">Lihat contoh penggunaan</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; height:2.25rem; padding:0.5rem 1rem; border:0 solid transparent; border-radius:var(--radius-md, 0.5rem); color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; font-weight:500; white-space:nowrap; cursor:pointer; outline:none; text-decoration:none; transition:all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn:has(>svg) { padding-inline:0.75rem; } .ds-btn>svg { width:1rem; height:1rem; flex-shrink:0; pointer-events:none; } .ds-btn:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-btn:disabled { pointer-events:none; opacity:0.5; } @media (prefers-reduced-motion:reduce) { .ds-btn { transition-duration:0.01ms; } } .ds-btn-link { color:var(--primary, #1e5f9e); background:transparent; text-underline-offset:4px; } .ds-btn-link:hover { text-decoration:underline; }"
+    },
+    {
+      "name": "Button / destructive",
+      "kind": "button",
+      "refersTo": "button-destructive",
+      "description": "Varian destructive dari shared/ui/button; cuplikan primitive, bukan aksi penyimpanan.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-destructive\">Aksi destructive</button>",
+      "css": ".ds-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; height:2.25rem; padding:0.5rem 1rem; border:0 solid transparent; border-radius:var(--radius-md, 0.5rem); color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; font-weight:500; white-space:nowrap; cursor:pointer; outline:none; text-decoration:none; transition:all 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn:has(>svg) { padding-inline:0.75rem; } .ds-btn>svg { width:1rem; height:1rem; flex-shrink:0; pointer-events:none; } .ds-btn:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-btn:disabled { pointer-events:none; opacity:0.5; } @media (prefers-reduced-motion:reduce) { .ds-btn { transition-duration:0.01ms; } } .ds-btn-destructive { color:#ffffff; background:var(--destructive, #b42318); } .ds-btn-destructive:hover { background:color-mix(in oklab, var(--destructive, #b42318) 90%, transparent); } .ds-btn-destructive:focus-visible { box-shadow:0 0 0 3px color-mix(in oklab, var(--destructive, #b42318) 20%, transparent); } :host-context(.dark) .ds-btn-destructive { background:color-mix(in oklab, var(--destructive, #ffaaa1) 60%, transparent); } :host-context(.dark) .ds-btn-destructive:focus-visible { box-shadow:0 0 0 3px color-mix(in oklab, var(--destructive, #ffaaa1) 40%, transparent); }"
+    },
+    {
+      "name": "Input / Nama item",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Field bernama dengan ukuran responsif, border semantik, dan fokus ui-v1.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-item-title\">Nama item</label><input class=\"ds-input\" id=\"ds-item-title\" autocomplete=\"off\" aria-required=\"true\" />",
+      "css": ".ds-field-label { display:block; margin-bottom:0.5rem; color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1; font-weight:500; } .ds-input { width:100%; min-width:0; height:2.25rem; padding:0.25rem 0.75rem; border:1px solid var(--input, #b7c4d3); border-radius:var(--radius-md, 0.5rem); background:transparent; color:var(--foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:1rem; line-height:1.5rem; box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05); outline:none; caret-color:var(--primary, #1e5f9e); transition:color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-input::placeholder { color:var(--muted-foreground, #546477); } .ds-input:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); } .ds-input[aria-invalid=true] { border-color:var(--destructive, #b42318); box-shadow:0 0 0 3px color-mix(in oklab, var(--destructive, #b42318) 20%, transparent); } .ds-input:disabled { cursor:not-allowed; opacity:0.5; pointer-events:none; } :host-context(.dark) .ds-input { background:color-mix(in oklab, var(--input, #526a84) 30%, transparent); } :host-context(.dark) .ds-input[aria-invalid=true] { box-shadow:0 0 0 3px color-mix(in oklab, var(--destructive, #ffaaa1) 40%, transparent); } @media(min-width:48rem) { .ds-input { font-size:0.875rem; line-height:1.25rem; } } @media(prefers-reduced-motion:reduce) { .ds-input { transition-duration:0.01ms; } }"
+    },
+    {
+      "name": "Navigation / PageFrame",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Dua tujuan contoh dengan hover dan tujuan aktif; dapat membungkus pada layar kecil.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navigasi starter\"><a class=\"ds-nav-link ds-nav-active\" href=\"/examples/feature\" aria-current=\"page\">Contoh fitur</a><a class=\"ds-nav-link\" href=\"/examples/visual\">3D dan motion</a></nav>",
+      "css": ".ds-nav { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.875rem; line-height:1.25rem; } .ds-nav-link { color:var(--muted-foreground, #546477); text-decoration:none; } .ds-nav-link:hover { color:var(--foreground, #1b2430); } .ds-nav-active { color:var(--primary, #1e5f9e); font-weight:500; } .ds-nav-link:focus-visible { outline:2px solid var(--ring, #1e5f9e); outline-offset:3px; }"
+    },
+    {
+      "name": "Badge / Status item",
+      "kind": "chip",
+      "refersTo": "badge-secondary",
+      "description": "Secondary untuk Aktif dan outline untuk Diarsipkan; kedua status tetap mempunyai label teks.",
+      "html": "<span class=\"ds-badge ds-badge-secondary\">Aktif</span> <span class=\"ds-badge ds-badge-outline\">Diarsipkan</span>",
+      "css": ".ds-badge { display:inline-flex; align-items:center; justify-content:center; gap:0.25rem; width:fit-content; padding:0.125rem 0.5rem; border:1px solid transparent; border-radius:var(--radius-md, 0.5rem); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:0.75rem; line-height:1rem; font-weight:500; white-space:nowrap; } .ds-badge-secondary { background:var(--secondary, #eaf0f6); color:var(--secondary-foreground, #213d58); } .ds-badge-outline { color:var(--foreground, #1b2430); border-color:var(--border, #d6dee8); } .ds-badge:focus-visible { border-color:var(--ring, #1e5f9e); box-shadow:0 0 0 3px color-mix(in oklab, var(--ring, #1e5f9e) 50%, transparent); }"
+    },
+    {
+      "name": "Card / ui-v1",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Primitive yang tersedia untuk pengelompokan yang dibutuhkan; tidak wajib pada halaman starter.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-header\"><div class=\"ds-card-title\">Contoh fitur</div><div class=\"ds-card-description\">Schema, adapter data, query, formulir, dan status antarmuka.</div></div><div class=\"ds-card-content\">Data ilustratif disimpan pada browser ini.</div></div>",
+      "css": ".ds-card { display:flex; flex-direction:column; gap:1.5rem; padding-block:1.5rem; border:1px solid var(--border, #d6dee8); border-radius:var(--radius-xl, 0.875rem); background:var(--card, #ffffff); color:var(--card-foreground, #1b2430); font-family:Workspace, 'Segoe UI', Arial, sans-serif; font-size:1rem; line-height:1.5; box-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); } .ds-card-header { display:grid; align-items:start; gap:0.5rem; padding-inline:1.5rem; } .ds-card-title { line-height:1; font-weight:600; } .ds-card-description { color:var(--muted-foreground, #546477); font-size:0.875rem; line-height:1.25rem; } .ds-card-content { padding-inline:1.5rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Starter teknis netral",
+    "overview": "Sistem yang sudah diterapkan mengutamakan keterbacaan, urutan informasi, dan kontrol yang mudah dikenali. Satu keluarga sans, permukaan netral sejuk, aksen biru semantik, serta primitive ui-v1 yang terkendali memberi dasar konsisten untuk referensi teknis. Ini adalah keputusan awal starter; identitas brand, domain, density, dan kebutuhan layar klien tetap ditentukan dari brief.\n\nDokumen ini menggabungkan panduan awal dengan implementasi saat ini. Frontmatter adalah snapshot normatif bagi konsumen DESIGN.md, diturunkan dari [design.tokens.json](design.tokens.json), [stylesheet](src/styles/index.css), [font aktif](src/styles/font.css), dan komponen di `src/shared`. Sumber implementasi warna/radius tetap `design.tokens.json`: ubah kedua tema di sana, jalankan `npm run tokens`, lalu perbarui frontmatter dan [.impeccable/design.json](.impeccable/design.json) bersama. Jangan mengedit `tokens.css` secara manual. Ukuran, spacing, dan variasi komponen berasal dari kode serta theme Tailwind yang terpasang. Sidecar menyimpan shadow, motion, breakpoint, dan cuplikan primitive; bukan salinan screenshot atau aset kreatif.\n\nPanduan cara memilih keputusan untuk proyek klien ada di [docs/DESIGN_GUIDE.md](docs/DESIGN_GUIDE.md). Sebelum layar baru, lengkapi [PRODUCT.md](PRODUCT.md) dan model data: pengguna, pekerjaan, informasi utama, aksi, perangkat, kepadatan, serta 2–3 referensi nyata dengan alasan spesifik. Pisahkan fakta, usulan, dan pertanyaan terbuka.",
+    "keyCharacteristics": [
+      "Hierarki melalui teks, jarak, alignment, dan kontras sebelum surface tambahan.",
+      "Satu font UI lokal dan pasangan token light/dark pada seluruh layar.",
+      "SVG Lucide bernama; tidak ada emoji atau glyph Unicode sebagai ikon.",
+      "Status data serta pemulihan jelas; motion dan 3D mempunyai fungsi serta fallback.",
+      "Komposisi starter sederhana; keputusan visual klien mengikuti pekerjaan dan brief."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Pair Rule",
+        "body": "Gunakan pasangan background/foreground sesuai perannya dan ubah light/dark bersama. Jangan mengunci surface satu halaman dengan warna literal atau menilai dark mode hanya dari pembalikan screenshot terang.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "**Do** mulai dari brief, model data, urutan informasi, dan satu aksi utama per konteks; pisahkan keputusan klien dari default starter.",
+      "**Do** gunakan semantic tokens untuk seluruh surface, termasuk input, popover, toast, caption, loading, dan kedua tema; perbarui sumber serta dokumen bersama.",
+      "**Do** gunakan satu keluarga UI lokal, bobot yang jelas, tabular-nums untuk angka yang dibandingkan, dan SVG Lucide bernama.",
+      "**Do** siapkan loading, pending, empty, error, retry, success, dan disabled yang benar; nyatakan keberhasilan setelah operasi benar-benar tersimpan.",
+      "**Do** evaluasi konten panjang/ekstrem, keyboard, fokus, IME, ponsel/desktop, zoom, overflow, kedua tema, reduced motion, dan koneksi lambat pada browser.",
+      "**Do** pakai 3D/gambar ketika menjelaskan objek atau tugas, dengan lazy loading, fallback DOM, dan provenance aset.",
+      "**Do** jelaskan data ilustratif secara jujur serta bedakan hasil build, smoke render, workflow, dan integrasi backend pada laporan verifikasi."
+    ],
+    "donts": [
+      "**Don't** menambah KPI palsu, sidebar, avatar, chart, kartu identik/kartu bersarang, hero kerja berlebihan, atau 3D tanpa kebutuhan produk.",
+      "**Don't** memakai eyebrow/nomor bagian dekoratif, klaim/metrik/quote tanpa sumber, gradien teks, glow, glass, partikel, atau grid latar sebagai pengganti hierarki.",
+      "**Don't** memakai emoji atau glyph Unicode sebagai ikon, mencampur katalog/stroke tanpa aturan, atau membuat tombol ikon tanpa nama aksesibel.",
+      "**Don't** mengunci warna surface per halaman, memakai status tanpa label, atau menganggap palet/font starter sebagai identitas klien yang sudah disetujui.",
+      "**Don't** menyembunyikan konten menunggu reveal, mengulang animasi setiap section, menghambat input, atau menambahkan parallax/autorotate yang tidak dapat dihentikan.",
+      "**Don't** menyajikan tombol mati, sukses palsu, fixture sebagai realtime, atau error tanpa jalan pemulihan yang tersedia.",
+      "**Don't** memakai kata utuh “demo” pada antarmuka/ekspor klien atau mengklaim alur klien selesai hanya dari lint, build, daftar library, atau screenshot beranda."
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "path": "public/models/box.glb",
+    "kind": "model",
+    "title": "Box",
+    "author": "Cesium",
+    "copyright": "2017 Cesium",
+    "sourceUrl": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/Box",
+    "downloadUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Box/glTF-Binary/Box.glb",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "licenseFile": "docs/licenses/box-CC-BY-4.0.txt",
+    "sourceNoticeFile": "docs/licenses/box-source.md",
+    "retrievedAt": "2026-10-20",
+    "modified": false,
+    "changes": "None; original binary file.",
+    "attribution": "Box by Cesium, 2017, via Khronos glTF Sample Assets, CC BY 4.0. Unmodified.",
+    "sha256": "ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e",
+    "bytes": 1664
+  }
+]

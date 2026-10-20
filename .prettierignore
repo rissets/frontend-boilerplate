@@ -1,0 +1,7 @@
+node_modules
+dist
+package-lock.json
+src/styles/tokens.css
+src/styles/font.css
+docs/licenses
+.agents/skills
